@@ -21,6 +21,8 @@ namespace GameDev_project
             // TODO: Add your initialization logic here
 
             base.Initialize();
+            //hier code pas schrijven
+
         }
 
         protected override void LoadContent()
