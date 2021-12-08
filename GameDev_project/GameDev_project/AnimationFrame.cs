@@ -12,7 +12,7 @@ namespace GameDev_project
         public Rectangle SourceRectangle { get; set; }
         public AnimationFrame(Rectangle sourceRectangle)
         {
-            sourceRectangle = SourceRectangle;
+            SourceRectangle = sourceRectangle;
         }
     }
 }

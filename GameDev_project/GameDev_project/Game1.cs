@@ -1,6 +1,7 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
+using System;
 
 namespace GameDev_project
 {
@@ -8,7 +9,8 @@ namespace GameDev_project
     {
         private GraphicsDeviceManager _graphics;
         private SpriteBatch _spriteBatch;
-        private Texture2D _heroTexture;
+
+        private Texture2D texture;
         private Hero hero;
         //private double secondCounter = 0;
 
@@ -23,16 +25,21 @@ namespace GameDev_project
         {
             // TODO: Add your initialization logic here
             base.Initialize();
-            //hier pas enemies, maps, tiles, etc initialiseren
-            hero = new Hero(_heroTexture);
+            hero = new Hero(texture);
         }
 
         protected override void LoadContent()
         {
             _spriteBatch = new SpriteBatch(GraphicsDevice);
-
+            texture = Content.Load<Texture2D>("fighterSpriteV2");
             // TODO: use this.Content to load your game content here
-            _heroTexture = Content.Load<Texture2D>("fighter_sprite");
+
+            InitializeGameObjects();
+        }
+
+        private void InitializeGameObjects()
+        {
+            hero = new Hero(texture);
         }
 
         protected override void Update(GameTime gameTime)
@@ -41,7 +48,7 @@ namespace GameDev_project
                 Exit();
 
             // TODO: Add your update logic here
-            hero.Update();
+            hero.Update(gameTime);
             base.Update(gameTime);
         }
 

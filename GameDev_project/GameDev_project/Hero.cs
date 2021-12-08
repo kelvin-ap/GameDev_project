@@ -11,23 +11,22 @@ namespace GameDev_project
     {
         private Texture2D texture;
         Animation animation;
-        private Rectangle _deelRectangleChar;        
-        private int schuifOp_X = 0;
 
         public Hero(Texture2D texture)
         {
             this.texture = texture;
             animation = new Animation();
-            animation.GetFrameFromProperties(texture.Width, texture.Height, 5, 2);
-
+            animation.GetFrameFromTextureProperties(texture.Width, texture.Height, 10, 4);
         }
+
         public void Draw(SpriteBatch spriteBatch)
         {
             spriteBatch.Draw(texture, new Vector2(0, 0), animation.CurrenFrame.SourceRectangle, Color.White);
         }
-        public void Update()
+
+        public void Update(GameTime gameTime)
         {
-            animation.Update();
+            animation.Update(gameTime);
         }
     }
 }

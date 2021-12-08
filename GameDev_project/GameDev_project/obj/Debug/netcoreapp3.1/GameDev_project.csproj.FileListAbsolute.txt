@@ -38,3 +38,4 @@ C:\Users\kelvi\VS_Studio\GameDev_project\GameDev_project\GameDev_project\GameDev
 C:\Users\kelvi\VS_Studio\GameDev_project\GameDev_project\GameDev_project\GameDev_project\bin\Debug\netcoreapp3.1\Content\2d-fantasy-ninja-sprite-sheets-5.xnb
 C:\Users\kelvi\VS_Studio\GameDev_project\GameDev_project\GameDev_project\GameDev_project\bin\Debug\netcoreapp3.1\Content\CharacterSheet.xnb
 C:\Users\kelvi\VS_Studio\GameDev_project\GameDev_project\GameDev_project\GameDev_project\bin\Debug\netcoreapp3.1\Content\fighter_sprite.xnb
+C:\Users\kelvi\VS_Studio\GameDev_project\GameDev_project\GameDev_project\GameDev_project\bin\Debug\netcoreapp3.1\Content\fighterSpriteV2.xnb

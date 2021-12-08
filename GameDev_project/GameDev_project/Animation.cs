@@ -12,6 +12,7 @@ namespace GameDev_project
         public AnimationFrame CurrenFrame { get; set; }
         private List<AnimationFrame> frames;
         private int counter;
+        private double secondCounter = 0;
 
         public Animation()
         {
@@ -22,14 +23,22 @@ namespace GameDev_project
             frames.Add(frame);
             CurrenFrame = frames[0];
         }
-        public void Update()
+        public void Update(GameTime gameTime)
         {
             CurrenFrame = frames[counter];
-            counter++;
+            secondCounter += gameTime.ElapsedGameTime.TotalSeconds;
+            int fps = 15;
+
+            if (secondCounter >= 1d/fps)
+            {
+                counter++;
+                secondCounter = 0;
+            }
+
             if (counter >= frames.Count)
                 counter = 0;
         }
-        public void GetFrameFromProperties(int width, int height, int numberOfWidthSprites, int numberOfHeightSprites)
+        public void GetFrameFromTextureProperties(int width, int height, int numberOfWidthSprites, int numberOfHeightSprites)
         {
             int widthOfFrame = width / numberOfWidthSprites;
             int heightOfFrame = height / numberOfHeightSprites;

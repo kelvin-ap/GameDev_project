@@ -1,5 +1,4 @@
-﻿using SharpDX.Direct3D9;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Text;
 using Microsoft.Xna.Framework;
@@ -10,7 +9,7 @@ namespace GameDev_project
 {
     interface IGameObject
     {
-        void Update();
+        void Update(GameTime gameTime);
         void Draw(SpriteBatch spriteBatch);
     }
 }
