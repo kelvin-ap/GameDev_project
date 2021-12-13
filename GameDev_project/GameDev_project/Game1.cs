@@ -11,7 +11,9 @@ namespace GameDev_project
         private SpriteBatch _spriteBatch;
 
         private Texture2D texture;
+        private Texture2D backgroundTexture;
         private Hero hero;
+
         //private double secondCounter = 0;
 
         public Game1()
@@ -19,6 +21,9 @@ namespace GameDev_project
             _graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
             IsMouseVisible = true;
+            _graphics.PreferredBackBufferWidth = 1617;
+            _graphics.PreferredBackBufferHeight = 882;
+            _graphics.ApplyChanges();
         }
 
         protected override void Initialize()
@@ -32,6 +37,8 @@ namespace GameDev_project
         {
             _spriteBatch = new SpriteBatch(GraphicsDevice);
             texture = Content.Load<Texture2D>("fighterSpriteV2");
+
+            backgroundTexture = Content.Load<Texture2D>("gameplayground");
             // TODO: use this.Content to load your game content here
 
             InitializeGameObjects();
@@ -56,6 +63,7 @@ namespace GameDev_project
         {
             GraphicsDevice.Clear(Color.CornflowerBlue);
             _spriteBatch.Begin();
+            _spriteBatch.Draw(backgroundTexture, new Vector2(0,0), Color.White);
             hero.Draw(_spriteBatch);
             _spriteBatch.End();
 
