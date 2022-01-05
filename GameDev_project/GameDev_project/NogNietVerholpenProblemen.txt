@@ -1,0 +1,9 @@
+﻿character kan naar beneden glitchen, vloer hitbox niet perfect ?
+
+code is nog niet voldoende verwerkt naar SOLID principe.
+
+sprite texture verandert niet volgens interactie --> MonoGame Tutorial 011 - Sprite Animation 13:14  !!priotiteit!!
+denk aan, wanneer snelheid x is zet dan "run" als sprite
+
+max height = 490
+max length = 2798
